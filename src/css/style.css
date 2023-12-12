@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+*::-moz-selection {
+  background: rgba(0, 0, 0, 0);
+}
+*::selection {
+  background: rgba(0, 0, 0, 0);
+}
+
+main .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #B793AB;
+  height: 100vh;
+  width: 100vw;
+}
+main .container .pieces {
+  aspect-ratio: 1;
+  display: inline-block;
+  height: 80%;
+  line-height: 0px;
+  position: absolute;
+}
+main .container .pieces .square {
+  aspect-ratio: 1;
+  display: inline-block;
+  height: 12.5%;
+  position: relative;
+  transition: background 0.15s;
+  vertical-align: top;
+}
+main .container .pieces .square h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  height: 100%;
+  width: 100%;
+  -webkit-text-stroke: 1px rgb(59, 59, 59);
+}
+main .container .pieces .white {
+  color: white;
+}
+main .container .pieces .black {
+  color: black;
+}
+main .container .board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
+  height: 80%;
+  background: red;
+  flex-direction: column;
+}
+main .container .board .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12.5%;
+  width: 100%;
+}
+main .container .board .row .square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ebecd0;
+  box-shadow: 0px 7px 0px #b0b19c;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 150%;
+  height: 100%;
+  transition: background 0.2s, box-shadow 0.2s;
+  width: 12.5%;
+}
+main .container .board .row:nth-of-type(even) .square:nth-of-type(odd) {
+  background: #779556;
+  box-shadow: 0px 7px 0px rgb(65, 120, 50);
+}
+main .container .board .row:nth-of-type(even) .square:nth-of-type(odd):hover {
+  background: #3C91E6;
+  box-shadow: 0px 7px 0px #2f6eac;
+}
+main .container .board .row:nth-of-type(odd) .square:nth-of-type(even) {
+  background: #779556;
+  box-shadow: 0px 7px 0px rgb(65, 120, 50);
+}
+main .container .board .row:nth-of-type(odd) .square:nth-of-type(even):hover {
+  background: #3C91E6;
+  box-shadow: 0px 7px 0px #2f6eac;
+}
+main .container .data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+  border: 4px rgba(0, 0, 0, 0.2) solid;
+  border-radius: 30px;
+  bottom: 50px;
+  flex-direction: column;
+  height: 100px;
+  position: absolute;
+  right: 50px;
+  width: 300px;
+}
+main .container .data .turn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  width: 100%;
+}
+main .container .data .turn-container .white {
+  background: rgb(255, 255, 255);
+  color: black;
+  border-bottom: 3px rgb(200, 200, 200) solid;
+  border-right: 2px rgb(200, 200, 200) solid;
+}
+main .container .data .turn-container .black {
+  background: rgb(50, 50, 50);
+  color: white;
+  border-bottom: 3px rgb(0, 0, 0) solid;
+  border-right: 2px rgb(0, 0, 0) solid;
+}
+main .container .data .turn-container #turn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 120%;
+  height: 80%;
+  width: 60%;
+}
+main .container .data h2 {
+  font-size: 120%;
+  margin-right: 2%;
+  width: 100%;
+  -webkit-text-stroke: 0.8px black;
+}
+main .container .data p {
+  font-size: 120%;
+  margin-right: 2%;
+  -webkit-text-stroke: 0.8px black;
+}/*# sourceMappingURL=style.css.map */

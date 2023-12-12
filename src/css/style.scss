@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    &::selection {
+        background: rgb(0 0 0 / 0);
+    }
+}
+
+$bg: #B793AB;
+
+$white: #ebecd0;
+$white-dark: #b0b19c;
+
+$black: #779556;
+$black-dark: rgb(65, 120, 50);
+
+$blue: #3C91E6;
+$blue-dark: #2f6eac;
+
+$shadow-offset: 7px;
+
+main .container {
+    @include flex;
+    background: $bg;
+    height: 100vh;
+    width: 100vw;
+
+    .pieces {
+        aspect-ratio: 1;
+        display: inline-block;
+        height: 80%;
+        line-height: 0px;
+        position: absolute;
+
+        .square {
+            aspect-ratio: 1;
+            display: inline-block;
+            height: 12.5%;
+            position: relative;
+            transition: background 0.15s;
+            vertical-align: top;
+
+            h1 {
+                @include flex;
+                font-size: 60px;
+                height: 100%;
+                width: 100%;
+                -webkit-text-stroke: 1px rgb(59, 59, 59);
+            }
+        }
+
+        .white { 
+            color: white; 
+            
+        };
+        .black { 
+            color: black; 
+        };
+    }
+
+    .board {
+        @include flex;
+
+        aspect-ratio: 1;
+        box-shadow: 0px 0px 100px rgb(0 0 0 / 0.5);
+        height: 80%;
+        background: red;
+        flex-direction: column;
+
+        .row {
+            @include flex;
+
+            height: 12.5%;
+            width: 100%;
+
+            .square {
+                @include flex;
+
+                background: $white;
+                box-shadow: 0px $shadow-offset 0px $white-dark;
+                color: rgb(0 0 0 / 0.3);
+                font-size: 150%;
+                height: 100%;
+                transition: background 0.2s, box-shadow 0.2s;
+                width: 12.5%;
+            }
+
+            &:nth-of-type(even) {
+                .square:nth-of-type(odd) {
+                    background: $black;
+                    box-shadow: 0px $shadow-offset 0px $black-dark;
+
+                    &:hover {
+                        background: $blue;
+                        box-shadow: 0px $shadow-offset 0px $blue-dark;
+                    }
+                }
+            }
+
+            &:nth-of-type(odd) {
+                .square:nth-of-type(even) {
+                    background: $black;
+                    box-shadow: 0px $shadow-offset 0px $black-dark;
+
+                    &:hover {
+                        background: $blue;
+                        box-shadow: 0px $shadow-offset 0px $blue-dark;
+                    }
+                }
+            }
+        }
+    }
+
+    .data {
+        @include flex;
+
+        background: rgb(0 0 0 / 0.1);
+        border: 4px rgb(0 0 0 / 0.2) solid;
+        border-radius: 30px;
+        bottom: 50px;
+        flex-direction: column;
+        height: 100px;
+        position: absolute;
+        right: 50px;
+        width: 300px;
+
+        .turn-container {
+            @include flex;
+
+            height: 30%;
+            width: 100%;
+
+            $white-turn: rgb(255, 255, 255);
+            $white-turn-dark: rgb(200, 200, 200);
+    
+            $black-turn: rgb(50, 50, 50);
+            $black-turn-dark: rgb(0, 0, 0);
+
+            .white {
+                background: $white-turn;
+                color: black;
+                border-bottom: 3px $white-turn-dark solid;
+                border-right: 2px $white-turn-dark solid;
+            }
+    
+            .black {
+                background: $black-turn;
+                color: white;
+                border-bottom: 3px $black-turn-dark solid;
+                border-right: 2px $black-turn-dark solid;
+            }
+    
+            #turn {
+                @include flex;
+    
+                border-radius: 10px;
+                font-size: 120%;
+                height: 80%;
+                width: 60%;
+            }
+        }
+
+        h2 {
+            font-size: 120%;
+            margin-right: 2%;
+            width: 100%;
+            -webkit-text-stroke: 0.8px black;
+        }
+
+        p {
+            font-size: 120%;
+            margin-right: 2%;
+            -webkit-text-stroke: 0.8px black;
+        }
+    }
+}
