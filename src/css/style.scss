@@ -18,7 +18,7 @@
     }
 }
 
-$bg: #B793AB;
+$bg: #343a3f;
 
 $white: #ebecd0;
 $white-dark: #b0b19c;
@@ -126,9 +126,9 @@ main .container {
     .data {
         @include flex;
 
-        background: rgb(0 0 0 / 0.1);
-        border: 4px rgb(0 0 0 / 0.2) solid;
-        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px rgba(255, 255, 255, 0.2) solid;
+        border-radius: 15px;
         bottom: 50px;
         flex-direction: column;
         height: 100px;
@@ -138,7 +138,7 @@ main .container {
 
         .turn-container {
             @include flex;
-
+            
             height: 30%;
             width: 100%;
 
@@ -176,13 +176,13 @@ main .container {
             font-size: 120%;
             margin-right: 2%;
             width: 100%;
-            -webkit-text-stroke: 0.8px black;
+            -webkit-text-stroke: 0.8px white;
         }
 
         p {
             font-size: 120%;
             margin-right: 2%;
-            -webkit-text-stroke: 0.8px black;
+            -webkit-text-stroke: 0.8px white;
         }
     }
 }

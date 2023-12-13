@@ -17,7 +17,7 @@ main .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #B793AB;
+  background: #343a3f;
   height: 100vh;
   width: 100vw;
 }
@@ -100,9 +100,9 @@ main .container .data {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.1);
-  border: 4px rgba(0, 0, 0, 0.2) solid;
-  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px rgba(255, 255, 255, 0.2) solid;
+  border-radius: 15px;
   bottom: 50px;
   flex-direction: column;
   height: 100px;
@@ -142,10 +142,10 @@ main .container .data h2 {
   font-size: 120%;
   margin-right: 2%;
   width: 100%;
-  -webkit-text-stroke: 0.8px black;
+  -webkit-text-stroke: 0.8px white;
 }
 main .container .data p {
   font-size: 120%;
   margin-right: 2%;
-  -webkit-text-stroke: 0.8px black;
+  -webkit-text-stroke: 0.8px white;
 }/*# sourceMappingURL=style.css.map */
